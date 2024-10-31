@@ -9,20 +9,20 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 #main {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    width: 100vw;
     background-color: black;
     color: #fff;
 }
 
 #nav {
     height: fit-content;
-    /* background-color: red; */
     width: 100%;
-    padding: 2vw 2vw;
+    padding: 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,13 +40,10 @@ body {
     gap: 80px;
 }
 
-/* #main-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
-} */
+#main-content {
+    position: relative;
+    text-align: center;
+}
 
 #main-content h1 {
     font-size: 6.5em;
@@ -54,32 +51,30 @@ body {
     line-height: 0.9;
     text-transform: uppercase;
     width: 60%;
-    /* margin-left: 30%; */
+    margin: 0 auto;
     position: relative;
     z-index: 999;
 }
 
 #main-content h1:nth-child(1) {
-    margin-top: 130px;
-    margin-left: 20%;
+    margin-top: 160px;
 }
 
 #main-content h1:nth-child(2) {
-    margin-left: 33%;
-    /* text-align: center; */
+    margin-left: 13%;
 }
 
 #main-content h1:nth-child(3) {
-    /* text-align: center; */
-    margin-left: 40%;
+    margin-left: 20%;
 }
 
 #main-content img {
     height: 360px;
     width: 260px;
     position: absolute;
-    top: 18%;
-    left: 40%;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #main-content #img1 {
@@ -92,4 +87,43 @@ body {
 
 #main-content #img3 {
     rotate: 8deg;
+}
+
+
+/* Tablet and smaller screens */
+@media screen and (max-width: 768px) {
+    #main {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #nav {
+        padding: 6vw;
+    }
+
+    #nav h3 {
+        font-size: 1.4rem;
+    }
+
+    #nav-part2 {
+        display: none;
+    }
+
+    #main-content h1 {
+        font-size: 4em;
+        line-height: 1.1;
+        width: 80%;
+    }
+
+    #main-content h1:nth-child(1),
+    #main-content h1:nth-child(2),
+    #main-content h1:nth-child(3) {
+        margin-left: 10%;
+    }
+
+    #main-content img {
+        height: 240px;
+        width: 180px;
+        top: 20%;
+    }
 }
