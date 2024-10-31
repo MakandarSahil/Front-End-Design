@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+
+#nav {
+    height: fit-content;
+    /* background-color: red; */
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* #main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+} */
+
+#main-content h1 {
+    font-size: 6.5em;
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+    width: 60%;
+    /* margin-left: 30%; */
+    position: relative;
+    z-index: 999;
+}
+
+#main-content h1:nth-child(1) {
+    margin-top: 130px;
+    margin-left: 20%;
+}
+
+#main-content h1:nth-child(2) {
+    margin-left: 33%;
+    /* text-align: center; */
+}
+
+#main-content h1:nth-child(3) {
+    /* text-align: center; */
+    margin-left: 40%;
+}
+
+#main-content img {
+    height: 360px;
+    width: 260px;
+    position: absolute;
+    top: 18%;
+    left: 40%;
+}
+
+#main-content #img1 {
+    rotate: 15deg;
+}
+
+#main-content #img2 {
+    rotate: 25deg;
+}
+
+#main-content #img3 {
+    rotate: 8deg;
+}
