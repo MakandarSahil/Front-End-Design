@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1, #page2, #page3 {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(red, blue);
+}
+
+#page1 {
+  background-color: aqua;
+}
+#page2 {
+  background-color: royalblue;
+}
+#page3 {
+  background-color: palevioletred;
+}
