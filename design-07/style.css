@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#page1 , #page2 , #page3, #page4, #page5, #page6, #page7 {
+  height: 100vh;
+  width: 100%;
+}
+
+#page1{
+  background-color: salmon;
+}
+#page2{
+  background-color: aqua;
+}
+#page2 img{
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+#page3{
+  background-color: palevioletred;
+}
+
+#page4 {
+  background-color: steelblue;
+}
+
+#page5{
+  background-color: seagreen;
+  display: flex;
+  align-items: center;
+}
+
+#page5 h1{
+  font-size: 58vh;
+  font-weight: 600;
+}
+
+#page6{
+  background-color: cadetblue;
+}
+
+#page6 #image-div{
+  height: 100%;
+  width: 30%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
+}
+
+#image-div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
