@@ -27,7 +27,7 @@ let marqueeAnimation = () => {
         transform: "translateX(0%)",
         repeat: -1,
         duration: 4,
-        ease: "power2.out",
+        ease: "none",
         onComplete: () => {
           isAnimating = false;
         }
