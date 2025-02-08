@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family:'Courier New', Courier, monospace
+}
+
+body {
+  background-color: #111111;
+}
+
+#page1, #page2, #page3{
+  height: 100vh;
+  width: 100%;
+
+}
+
+#move {
+  background-color: #D8FF04;
+  display: flex;
+  padding: 2.5vw 0;
+  overflow: hidden;
+}
+
+#move .marquee{
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0 1.5vw ;
+  transform: translateX(-100%);
+}
+.marquee i {
+  font-size : 40px;
+  border: 2px solid #111111;
+  border-radius: 50%;
+  padding: 6px;
+}
