@@ -36,6 +36,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 40px 70px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
 
 nav .part2 {
@@ -73,7 +76,7 @@ nav button {
   height: 100%;
   width: 100%;
   display: flex;
-  padding: 40px 100px;
+  padding: 180px 100px;
 }
 
 .centerPart1 {
@@ -149,6 +152,7 @@ nav button {
     flex-direction: column;
     align-items: center;
     padding: 40px 100px;
+    padding-top: 130px;
   }
 
   .centerPart1 {
@@ -212,6 +216,7 @@ nav button {
   }
   .center {
     padding: 40px 20px;
+    padding-top: 140px;
   }
 
   .centerPart1 {
@@ -241,7 +246,7 @@ nav button {
 }
 
 .section2 {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   position: relative;
 }
@@ -272,7 +277,6 @@ nav button {
 
 @media screen and (max-width: 1200px) {
   .section2 {
-    height: 100%;
     width: 100%;
     position: relative;
     justify-content: center;
@@ -284,7 +288,6 @@ nav button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: palegreen; */
     width: 100%;
   }
 
@@ -309,11 +312,10 @@ nav button {
 
 .elem {
   flex-shrink: 0;
-  height: 45%;
+  height: 320px;
   width: 45%;
   border: 3px solid black;
   border-radius: 40px;
-  background-color: red;
   margin-bottom: 80px;
   box-shadow: 0px 20px 0px black;
 }
@@ -325,7 +327,6 @@ nav button {
 
   .elem {
     flex-shrink: 0;
-    height: 48%;
     width: 100%;
     margin-bottom: 60px;
   }
@@ -337,13 +338,13 @@ nav button {
   }
 
   .elem {
-    height: 55%;
+    height: 400px;
     border-radius: 60px;
   }
 }
 
 .elem {
-  padding: 5px 40px;
+  padding: 12px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -366,10 +367,10 @@ nav button {
 }
 
 .elem:nth-child(1) {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 .elem:nth-child(2) {
-  background-color:#b9ff66;
+  background-color: #b9ff66;
 }
 .elem:nth-child(3) {
   background-color: black;
@@ -379,7 +380,7 @@ nav button {
   filter: invert(100%);
 }
 .elem:nth-child(4) {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 .elem:nth-child(5) {
   background-color: #b9ff66;
@@ -405,5 +406,137 @@ nav button {
     flex-direction: column;
     justify-content: center;
     gap: 40px;
+  }
+}
+
+.section3 {
+  /* height: 100%; */
+  height: fit-content;
+  width: 100%;
+  position: relative;
+}
+
+.section3 .contact {
+  padding: 40px 100px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  font-family: Neue;
+  width: 70%;
+}
+
+.contact h1 {
+  font-size: 32px;
+  background-color: #b9ff66;
+  padding: 2px 4px;
+}
+
+.contact h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* {section3 media queries} */
+
+@media screen and (max-width: 1200px) {
+  .section3 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+
+  .section3 .contact {
+    padding: 20px 15px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact h1 {
+    font-size: 32px;
+  }
+
+  .contact h3 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.contactForm {
+  height: 100%;
+  width: 100%;
+  padding: 80px 160px;
+  display: flex;
+  align-items: start;
+  font-family: Neue;
+}
+
+.contactForm form {
+  /* height: ; */
+  width: 100%;
+  border-radius: 40px;
+  padding: 90px 100px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  overflow: hidden;
+}
+
+form .formLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+}
+
+.formLeft .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formLeft input,
+textarea {
+  padding: 18px 14px;
+  border: 2px solid #111111;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+.formLeft button {
+  background-color: #111111;
+  color: white;
+  padding: 14px 24px;
+  font-size: 14px;
+  border-radius: 15px;
+  border: none;
+}
+
+form .formRight img {
+  position: relative;
+  right: -50%;
+}
+
+form .formRight {
+  width: 40%;
+}
+
+@media screen and (max-width: 1200px) {
+  .contactForm {
+    padding: 40px 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contactForm form {
+    padding: 40px 25px;
+  }
+  form .formRight {
+    display: none;
   }
 }
