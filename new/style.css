@@ -35,10 +35,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 70px;
+  padding: 20px 70px;
   position: fixed;
   z-index: 10;
   width: 100%;
+  background-color: #baff66b3;
+  backdrop-filter: blur(10px);
 }
 
 nav .part2 {
@@ -209,7 +211,7 @@ nav button {
 
 @media screen and (max-width: 800px) {
   nav {
-    padding: 40px 15px;
+    padding: 20px 15px;
   }
   nav button {
     display: none;
@@ -636,6 +638,7 @@ footer .footerDiv {
   border-radius: 14px;
   background-color: transparent;
   outline: none;
+  color: white;
 }
 .footerpart2 .part2_2 form button {
   background-color: #b9ff66;
