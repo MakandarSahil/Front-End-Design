@@ -1,0 +1,276 @@
+@font-face {
+  font-family: Neue;
+  src: url(./3856NeueMachina.woff2);
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #B9FF66;
+  border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+}
+
+.section1{
+  height: fit-content;
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 70px;
+}
+
+nav .part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+nav .part2 .menu {
+  display: none;
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: Neue;
+}
+nav h1 i {
+  display: inline-block;
+  rotate: 45deg;
+  margin-right: 5px;
+}
+nav h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+nav button {
+  padding: 18px 28px;
+  font-size: 1vw;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 40px 100px;
+}
+
+.centerPart1 {
+  height: 100%;
+  width: 45%;
+}
+.centerPart2 {
+  height: 100%;
+  width: 55%;
+  position: relative;
+}
+
+.centerPart2 img {
+  position: absolute;
+  right: 0;
+}
+
+.centerPart1 h1 {
+  font-size: 60px;
+  font-family: Neue;
+  line-height: 1.2;
+}
+
+.centerPart1 p {
+  font-size: 16px;
+  width: 85%;
+  margin-top: 34px;
+  margin-bottom: 55px;
+}
+.centerPart1 button {
+  background-color: black;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1vw;
+  border-radius: 5px;
+  border: none;
+}
+
+.section1Bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 120px;
+  gap: 20px;
+}
+.section1Bottom img {
+  filter: invert(50%);
+}
+.section1Bottom img:hover {
+  filter: none;
+}
+
+/* {section1 media queries} */
+
+@media screen and (max-width: 1200px) {
+  section {
+    height: fit-content;
+  }
+  nav .part2 .menu {
+    display: initial;
+    font-size: 24px;
+  }
+  nav h4 {
+    display: none;
+  }
+  nav button {
+    padding: 20px 38px;
+  }
+
+  .center {
+    height: 120%;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 100px;
+  }
+
+  .centerPart1 {
+    width: 70%;
+    text-align: center;
+  }
+  .centerPart2 {
+    height: 100%;
+    width: 55%;
+    position: relative;
+    /* background-color: azure; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+
+  .centerPart2 img {
+    position: relative;
+    right: 0;
+  }
+
+  .centerPart1 h1 {
+    font-size: 60px;
+    font-family: Neue;
+    line-height: 1.2;
+  }
+
+  .centerPart1 p {
+    font-size: 16px;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 55px;
+  }
+  .centerPart1 button {
+    background-color: black;
+    color: white;
+    padding: 18px 44px;
+    font-size: 1.3vw;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .section1Bottom {
+    justify-content: center;
+    gap: 40px;
+  }
+  .section1Bottom img {
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    max-width: 120px;
+  }
+}
+
+@media  screen and (max-width: 800px) {
+
+  nav {
+    padding: 40px 15px;
+  }
+  nav button {
+    display: none;
+  }
+  .center {
+    padding: 40px 20px;
+  }
+
+  .centerPart1 {
+    width: 100%;
+  }
+  .centerPart2 {
+    padding: 20px 10px;
+  }
+
+  .centerPart2 img {
+    height: 290px;
+    width: 340px;
+  }
+
+  .centerPart1 h1 {
+    font-size: 50px;
+  }
+
+  .centerPart1 p {
+    font-size: 12px;
+    margin-bottom: 60px;
+  }
+  .centerPart1 button {
+    padding: 14px 34px;
+    font-size: 13px;
+  }
+}
+
+
+.section2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.section2 .services {
+  padding: 40px 100px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  font-family: Neue;
+  width: 70%;
+}
+
+.services h1 {
+  font-size: 32px;
+}
+
+.services h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .section2 .services {
+    width: 100%;
+  }
+  
+}
