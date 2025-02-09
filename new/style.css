@@ -25,6 +25,13 @@ body {
   font-family: Montserrat;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+h4, i , button {
+  cursor: pointer;
+}
 .section1 {
   height: fit-content;
   width: 100%;
@@ -74,6 +81,12 @@ nav button {
   border: 1px solid black;
 }
 
+nav button:hover{
+  background-color: #111111;
+  color: white;
+  border: 1px solid white;  
+}
+
 .center {
   height: 100%;
   width: 100%;
@@ -115,6 +128,12 @@ nav button {
   font-size: 1vw;
   border-radius: 5px;
   border: none;
+}
+
+.centerPart1 button:hover{
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid black;
 }
 
 .section1Bottom {
@@ -519,6 +538,12 @@ textarea {
   border: none;
 }
 
+.formLeft button:hover{
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid black;
+}
+
 form .formRight img {
   position: relative;
   right: -50%;
@@ -648,6 +673,12 @@ footer .footerDiv {
   font-size: 14px;
   border-radius: 15px;
   border: none;
+}
+
+.footerDiv .part2_2 button:hover, .footerpart2 .part2_1 button:hover{
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 1200px) {
