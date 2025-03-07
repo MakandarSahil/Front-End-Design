@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Directory</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-hover-bg: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --accent-color: #ffdd57;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-attachment: fixed;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+            pointer-events: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: var(--card-hover-bg);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            padding: 10px;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .card a::after {
+            content: '→';
+            opacity: 0;
+            margin-left: -15px;
+            transition: all 0.3s;
+        }
+        
+        .card:hover a {
+            color: var(--accent-color);
+        }
+        
+        .card:hover a::after {
+            opacity: 1;
+            margin-left: 10px;
+        }
+        
+        footer {
+            margin-top: 50px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        /* Adding custom icons based on project names */
+        .design-icon::before {
+            content: "🎨";
+        }
+        
+        .animation-icon::before {
+            content: "✨";
+        }
+        
+        .mini-icon::before {
+            content: "📦";
+        }
+        
+        .gsap-icon::before {
+            content: "🎭";
+        }
+
+        .github {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="header">
+        <h1>My Creative Portfolio</h1>
+        <p class="subtitle">Explore my collection of design projects and interactive animations</p>
+    </div>
+     -->
+    <div class="container">
+        <div class="card">
+            <div class="card-icon design-icon"></div>
+            <a href="/desgin-04/index.html">Design 04</a>
+        </div>
+        <div class="card">
+            <div class="card-icon design-icon"></div>
+            <a href="/design-05/index.html">Design 05</a>
+        </div>
+        <div class="card">
+            <div class="card-icon design-icon"></div>
+            <a href="/design-06/index.html">Design 06</a>
+        </div>
+        <div class="card">
+            <div class="card-icon design-icon"></div>
+            <a href="/desgin-07/index.html">Design 07</a>
+        </div>
+        <div class="card">
+            <div class="card-icon animation-icon"></div>
+            <a href="/AnimatedSidebar/index.html">Animated Sidebar</a>
+        </div>
+        <div class="card">
+            <div class="card-icon gsap-icon"></div>
+            <a href="/MarqueeGsap/index.html">Marquee Gsap</a>
+        </div>
+        <div class="card">
+            <div class="card-icon mini-icon"></div>
+            <a href="/mini-project1/index.html">Mini Project 1</a>
+        </div>
+        <div class="card">
+            <div class="card-icon mini-icon"></div>
+            <a href="/mini-project2/index.html">Mini Project 2</a>
+        </div>
+        <div class="card">
+            <div class="card-icon mini-icon"></div>
+            <a href="/mini-project3/index.html">Mini Project 3</a>
+        </div>
+        <div class="card">
+            <div class="card-icon gsap-icon"></div>
+            <a href="/MousePointerGsap/index.html">Mouse Pointer Gsap</a>
+        </div>
+        <div class="card">
+            <div class="card-icon gsap-icon"></div>
+            <a href="/new/index.html">Gsap Landing Page</a>
+        </div>
+        <div class="card">
+            <div class="card-icon animation-icon"></div>
+            <a href="/TextAnimation/index.html">Text Animation</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p><a class="github" href="https://github.com/MakandarSahil" target="_blank">Get Connected - Git Hub</a></p>
+    </footer>
+</body>
+</html>
